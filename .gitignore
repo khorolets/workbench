@@ -1,0 +1,6 @@
+.idea
+.env.fish
+*.pyc
+stuff/
+*.egg-info
+__pycache__
