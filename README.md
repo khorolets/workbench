@@ -18,12 +18,10 @@ When your work is done you simple build your templates in a separate directory b
 **Important note:** I'm going to create PyPi package in near future to simplify the installation to `pip install Workbench` or something similar. So this may change soon.
 
 ```bash
-$ git clone https://github.com/khorolets/workbench.git
-$ cd workbench
-$ pip install .
+$ pip install git+https://github.com/khorolets/workbench.git@master
 ```
 
-Note that may be you'll need to use `pip3 install .` if you have different versions of Python.
+Note that may be you'll need to use `pip3` if you have different versions of Python.
 
 
 ## Quick guide
