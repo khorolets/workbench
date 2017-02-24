@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 import os
 import sys
 
@@ -12,7 +13,7 @@ from flask import (
 
 from .core import render, render_dist, default_config
 
-app = Flask(__name__, static_folder='./static')
+app = Flask(__name__, static_folder=os.path.join(os.getcwd(), 'static'))
 
 _possible_answers = ['n', 'Y']
 
