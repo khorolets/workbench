@@ -62,9 +62,9 @@ Create `templates/index.html`:
 Open http://localhost:5000/page/index.html to see your "Hello world". If you are not familiar with *Jinja2* syntax you can visit the [official template designer documentation](http://jinja.pocoo.org/docs/2.9/templates/)
 
 ## Fake data
-*Workbench* includes the great library for generating fake data - [Elizabeth](https://github.com/lk-geimfari/elizabeth) by [@lk-geimfari](https://github.com/lk-geimfari). 
+*Workbench* depends on the great library for generating fake data - [Elizabeth](https://github.com/lk-geimfari/elizabeth) by [@lk-geimfari](https://github.com/lk-geimfari).
 
-It is available for you on every page in `elizabeth` variable. 
+It is available for you on every page in `elizabeth` variable.
 
 Common usage example:
 
@@ -75,7 +75,7 @@ Common usage example:
 {% endblock %}
 ```
 
-Please, see the [Elizabeth's official documentation](http://elizabeth.readthedocs.io/en/latest/index.html) to learn more about [available providers](http://elizabeth.readthedocs.io/en/latest/guide.html). 
+Please, see the [Elizabeth's official documentation](http://elizabeth.readthedocs.io/en/latest/index.html) to learn more about [available providers](http://elizabeth.readthedocs.io/en/latest/guide.html).
 
 ## How to work with Elizabeth:
 In all templates you're creating `elizabeth` variable is available for you in two different ways.
@@ -84,7 +84,7 @@ In all templates you're creating `elizabeth` variable is available for you in tw
 In that case [Elizabeth's Generic class](http://elizabeth.readthedocs.io/en/latest/index.html#usage) initiated with the language specified in config and you can use it like that:
 
     {{ elizabeth.personal.full_name('female') }}
-    
+
 #### If there is no `config.json` in the root</h3>
 In that case `elizabeth` variable is still available but the way of usage is changing a little bit:
 
