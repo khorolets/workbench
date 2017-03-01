@@ -6,7 +6,7 @@ with open('README.md') as f:
 
 setup(
     name='Workbench',
-    version='0.1.0',
+    version='0.1.1',
     description='Timesaver for psd2html (markup)',
     long_description=readme,
     author='Bohdan Khorolets',

@@ -5,6 +5,7 @@ import elizabeth
 import jinja2
 import json
 import os
+import time
 
 from flask import url_for
 
@@ -13,7 +14,8 @@ def static(path):
     """
     Wraps flask's `url_for` function to simplify the usage
     """
-    return url_for('static', filename=path)
+    timestamp_append = '?t={}'.format(int(time.time()))
+    return url_for('static', filename=path) + timestamp_append
 
 
 def init_elizabeth():
@@ -31,7 +33,6 @@ def init_jinja2():
     env.globals.update({
             'static': static,
             'elizabeth': init_elizabeth()
-            # 'url': reverse,
         })
     return env
 

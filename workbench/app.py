@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
+__version__ = '0.1.1'
+
 import os
-import sys
 
 from flask import (
     Flask,
@@ -82,6 +83,7 @@ def  greeting():
             <p>No files found in <code>templates</code> directory yet. </p>
         {% endfor %}
     </ol>
+    <p>Your static is server from: <code>{{ static_dir }}</code>
 
     <h2>Commands:</h2>
     <p>Workbench has tree main commands:</p>
@@ -116,7 +118,10 @@ def  greeting():
     </body>
     </html>
     '''
-    context = {'files': html_files()}
+    context = {
+        'files': html_files(),
+        'static_dir': os.path.join(os.getcwd(), 'static')
+    }
     return Response(render_template_string(greeting_template, **context))
 
 
