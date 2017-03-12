@@ -10,6 +10,7 @@ You can simply use the advantages of *extending* and *including* templates, *loo
 When your work is done you simple build your templates in a separate directory by one command and then just pack and share it.
 
 ## Available commands
+* `workbench version` - returns version of package.
 * `workbench runserver` - runs *Flask* server
 * `workbench build` - renders all the templates from `templates` into separate html files and places them in `dist` directory together with the `static` directory content (saving its structure)
 * `workbench initial_data_structure` - creates necessary directory structure in the current directory (`static`, `templates` and `config.json` will be created). This command runs when you visit http://localhost:5000/ except the `config.json`
@@ -21,7 +22,7 @@ When your work is done you simple build your templates in a separate directory b
 $ pip install git+https://github.com/khorolets/workbench.git@master
 ```
 
-Note that may be you'll need to use `pip3` if you have different versions of Python.
+~Note that may be you'll need to use `pip3` if you have different versions of Python.~
 
 
 ## Quick guide
@@ -29,6 +30,14 @@ Note that may be you'll need to use `pip3` if you have different versions of Pyt
 ```bash
 $ mkdir my_project && cd my_project
 $ workbench runserver
+```
+
+or if you prefer Docker:
+
+```bash
+$ mkdir my_project && cd my_project
+$ docker run --rm -it -v $(pwd):/www -p 5000:5000 khorolets/workbench runserver
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 ```
 
 **Flask** server will be started and you can open http://localhost:5000/ to see the greeting page.

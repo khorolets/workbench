@@ -1,5 +1,5 @@
 #! /usr/bin/env python3
-__version__ = '0.1.1'
+__version__ = '0.2.0'
 
 import os
 
@@ -130,14 +130,14 @@ def  page(filename):
     return Response(render(filename, {}))
 
 
-def build():
+def build(force=False):
     """
     Prepares the work to distribution
     """
     import shutil
     print("Building...")
     if os.path.exists('./dist'):
-        user_answer = None
+        user_answer = 'Y' if force else None
         while user_answer not in _possible_answers:
             user_answer = input("dist is already exist, if you continue it would be replaced with the new one. [Y/n]: ")
             if user_answer == 'y':
